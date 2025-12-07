@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity App</title>
+  <link rel="stylesheet" href="note.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#27ae60">
+
+</head>
+<body>
+
+<!-- Navigation Tabs -->
+<div class="tabs">
+  <button class="tab-btn active" data-target="calendarPage">📅 Calendar</button>
+  <button class="tab-btn" data-target="notesPage">📝 Notes</button>
+</div>
+
+<!-- ============ CALENDAR PAGE ============ -->
+<div id="calendarPage" class="page active">
+
+  <div class="calendar">
+    <div class="header">
+      <button id="prev">&#10094;</button>
+      <h2 id="monthYear"></h2>
+      <button id="next">&#10095;</button>
+    </div>
+
+    <div class="weekdays">
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+      <div>Thu</div><div>Fri</div><div>Sat</div>
+    </div>
+
+    <div class="days" id="days"></div>
+  </div>
+
+  <!-- Event Input -->
+  <div id="eventBox" class="event-box hidden">
+    <h3>Add Event</h3>
+    <p id="selectedDateText"></p>
+    <textarea id="eventInput" placeholder="Event details..."></textarea>
+    <button id="saveEvent">Save</button>
+    <button id="closeEventBox">Cancel</button>
+  </div>
+</div>
+
+<!-- ============ NOTES PAGE ============ -->
+<div id="notesPage" class="page">
+  <h1>Colored Notes</h1>
+
+  <div class="controls">
+    <input type="color" id="noteColor" value="#ff7675">
+    <button id="addNote">➕ Add Note</button>
+  </div>
+
+  <div id="notesContainer"></div>
+</div>
+
+<script src="note.js"></script>
+</body>
+</html>
